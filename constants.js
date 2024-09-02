@@ -6,6 +6,7 @@ import {
   SiTypescript,
   SiFirebase,
 } from "react-icons/si";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 
 export const socials = [
   { icon: <FaGithub />, path: "https://www.github.com/hasanhincal" },
@@ -236,3 +237,124 @@ export const skills = {
     },
   ],
 };
+
+// projects data
+export const projects = [
+  {
+    num: "01",
+    category: "frontent",
+    title: "hotels app",
+    description:
+      "A React application for managing and exploring hotels. This app allows users to search for hotels, create new hotel entries, view details, and filter/sort hotels based on various criteria.",
+    stack: [
+      { name: "React.js" },
+      { name: "Tailwind CSS" },
+      { name: "React Query" },
+    ],
+    image: "/work/thumb1.png",
+    live: "",
+    github: "https://github.com/hasanhincal/Hotels-App-tanstack-query",
+  },
+  {
+    num: "02",
+    category: "fullstack",
+    title: "restaurant app",
+    description:
+      "A responsive restaurant application built with Next.js, Prisma, and Stripe. This project includes order management, responsive design, and payment functionalities.",
+    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Prisma" }],
+    image: "/work/thumb2.png",
+    live: "",
+    github: "https://github.com/hasanhincal/restaurant-nextjs-full",
+  },
+  {
+    num: "03",
+    category: "frontent",
+    title: "youtube clone app",
+    description:
+      "This project is a web application developed to emulate the basic functionality of YouTube. Users can search for videos, watch them and add them to their favorite lists. The project was developed using modern web technologies and popular libraries.",
+    stack: [
+      { name: "React.js" },
+      { name: "RapitAPI YT API" },
+      { name: "Tailwind CSS" },
+    ],
+    image: "/work/thumb3.png",
+    live: "",
+    github: "https://github.com/hasanhincal/Youtube-Clone-Project-React",
+  },
+  {
+    num: "04",
+    category: "frontent",
+    title: "twitter clone app",
+    description:
+      "Users can create, edit, like and delete tweets.View tweet updates in real time.User-friendly interface design.",
+    stack: [
+      { name: "React.js" },
+      { name: "Firebase" },
+      { name: "Tailwind CSS" },
+    ],
+    image: "/work/thumb4.png",
+    live: "https://twitter-clone-firebase-alpha.vercel.app/",
+    github: "https://github.com/hasanhincal/Youtube-Clone-Project-React",
+  },
+  {
+    num: "05",
+    category: "frontent",
+    title: "chat app",
+    description:
+      "This project aims to create a simple chat application using Firebase. Firebase provides features such as real-time database and authentication, enabling you to build fast and reliable chat applications.",
+    stack: [{ name: "React.js" }, { name: "Firebase" }, { name: "CSS 3" }],
+    image: "/work/thumb5.png",
+    live: "https://chat-app-fire-base.vercel.app/",
+    github: "https://github.com/hasanhincal/Chat-App-FireBase",
+  },
+  {
+    num: "06",
+    category: "frontent",
+    title: "D-506 Game Portal app",
+    description:
+      "Welcome to the D-503 Game Portal! This repository houses the code for a vibrant gaming hub designed to connect gamers and provide an immersive experience with a variety of games. Our goal is to create a community-driven platform where users can play, share, and discuss their favorite games.",
+    stack: [{ name: "Html 5" }, { name: "Scss" }, { name: "JavaScript" }],
+    image: "/work/thumb6.png",
+    live: "",
+    github: "https://github.com/hasanhincal/Chat-App-FireBase",
+  },
+];
+
+// project info
+export const info = [
+  {
+    icon: <FaPhoneAlt />,
+    title: "Phone",
+    description: "(+90) 514 141 14 14",
+  },
+  {
+    icon: <FaEnvelope />,
+    title: "Email",
+    description: "hasanfatime14@gmail.com",
+  },
+  {
+    icon: <FaMapMarkedAlt />,
+    title: "Address",
+    description: "Izzet Baysal Street, Central/Bolu 14000",
+  },
+];
+
+// input data
+export const inputData = [
+  {
+    type: "text",
+    placeholder: "Firstname",
+  },
+  {
+    type: "text",
+    placeholder: "Lastname",
+  },
+  {
+    type: "email",
+    placeholder: "Email address",
+  },
+  {
+    type: "text",
+    placeholder: "Phone number",
+  },
+];
