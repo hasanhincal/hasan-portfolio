@@ -11,7 +11,7 @@ import Stats from "@/components/Stats";
 const Home = () => {
   const handleDownload = () => {
     // cv dosyasının bulunduğu URL
-    const url = "https://www.myportfolio.safewebsite.store/cv.pdf";
+    const url = "/cv.pdf";
     // Yeni bir link (a) elementi oluşturup indirici gibi davranmasını sağlıyoruz
     const link = document.createElement("a");
     link.href = url;
