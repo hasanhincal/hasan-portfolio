@@ -1,3 +1,4 @@
+"use client";
 import { FiDownload } from "react-icons/fi";
 import React from "react";
 
@@ -8,6 +9,15 @@ import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
 const Home = () => {
+  const handleDownload = () => {
+    // cv dosyasının bulunduğu URL
+    const url = "/cv.pdf";
+    // Yeni bir link (a) elementi oluşturup indirici gibi davranmasını sağlıyoruz
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Hasan_Hincal_CV.pdf"; // Dosyanın ismi burada değiştirilebilir
+    link.click(); // Linke tıklama işlemini tetikliyoruz
+  };
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -28,6 +38,7 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
+                onClick={handleDownload}
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
