@@ -1,16 +1,24 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
-import React from "react";
+import React, { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import Link from "next/link";
 import { links } from "@/constants";
 
 const MobileNav = () => {
+  const [isOpen, setIsOpen] = useState(false); // menüyü acıp kapatmak için
   const pathName = usePathname();
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
   return (
-    <Sheet>
-      <SheetTrigger className="flex justify-center items-center">
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+      <SheetTrigger
+        className="flex justify-center items-center"
+        onClick={() => setIsOpen(!isOpen)}
+      >
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
 
@@ -31,6 +39,7 @@ const MobileNav = () => {
               <Link
                 href={link.path}
                 key={index}
+                onClick={closeMenu} //link tıklandığında menüyü kapat
                 className={`${
                   link.path === pathName &&
                   "text-accent border-b-2 border-accent"
